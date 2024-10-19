@@ -9,8 +9,10 @@
     ./languages
   ];
 
+  # Plugins
   nuqor.nvim.bufferline.enable = true;
   nuqor.nvim.lualine.enable = true;
+  nuqor.nvim.markdown-preview.enable = true;
   nuqor.nvim.neo-tree.enable = true;
   nuqor.nvim.noice.enable = true;
   nuqor.nvim.notify.enable = true;
@@ -20,6 +22,7 @@
   nuqor.nvim.toggleterm.enable = true;
   nuqor.nvim.web-devicons.enable = true;
 
+  # Languages
   nuqor.nvim.nix.enable = true;
   nuqor.nvim.python.enable = true;
 

@@ -5,6 +5,7 @@
     ./bufferline.nix
     ./lsp.nix
     ./lualine.nix
+    ./markdown-preview.nix
     ./neo-tree.nix
     ./noice.nix
     ./notify.nix
