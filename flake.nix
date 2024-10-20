@@ -14,6 +14,7 @@
     }:
     let
       eachSystem = nixpkgs.lib.attrsets.genAttrs [
+        "x86_64-linux"
         "x86_64-darwin"
       ];
       nixvimModule = eachSystem (system: {
