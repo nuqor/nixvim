@@ -30,26 +30,6 @@ in
               end,
             })
           '';
-          extraOptions = {
-            on_new_config = {
-              __raw = ''
-                function(config, root_dir)
-                  local util = require("lspconfig.util")
-                  
-                  -- construct the absolute path of possible pyproject.toml
-                  -- TODO: Also allow ruff.toml and .ruff.toml
-                  local pyproject = util.path.join(root_dir, "pyproject.toml")                  
-                  
-                  -- append the command line argument `--config <root_dir>/pyproject.toml`
-                  -- to `config.cmd` if `pyproject.toml` exists
-                  if util.path.is_file(pyproject) then
-                    append_to_cmd = { "--config", pyproject }
-                    table.move(append_to_cmd, 1, #append_to_cmd, #config.cmd + 1, config.cmd)
-                  end
-                end
-              '';
-            };
-          };
         };
         # Use Pyright without linting (diagnostics)
         pyright = {
