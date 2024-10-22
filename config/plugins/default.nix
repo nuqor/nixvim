@@ -3,6 +3,7 @@
 {
   imports = [
     ./bufferline.nix
+    ./conform.nix
     ./lint.nix
     ./lsp.nix
     ./lualine.nix
