@@ -40,6 +40,30 @@ in
       };
     };
 
+    autoCmd = [
+      {
+        event = "VimEnter";
+        callback = {
+          __raw = ''
+            function()
+              local venv_dir
+              for dir in vim.fs.parents(vim.fs.joinpath(vim.fn.getcwd(), ".")) do
+                if vim.fn.filereadable(vim.fs.joinpath(dir, ".venv/bin/python")) == 1 then
+                  venv_dir = vim.fs.joinpath(dir, ".venv")
+                  break
+                end
+              end
+              if venv_dir then
+                vim.env.VIRTUAL_ENV = venv_dir
+                vim.env.PATH = vim.fs.joinpath(venv_dir, "bin") .. ":" .. vim.env.PATH
+                vim.notify("Activated venv: " .. venv_dir)
+              end
+            end
+          '';
+        };
+      }
+    ];
+
   };
 
 }
