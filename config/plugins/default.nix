@@ -3,6 +3,7 @@
 {
   imports = [
     ./bufferline.nix
+    ./lint.nix
     ./lsp.nix
     ./lualine.nix
     ./markdown-preview.nix
