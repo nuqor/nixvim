@@ -25,6 +25,7 @@
   nuqor.nvim.web-devicons.enable = true;
 
   # Languages
+  nuqor.nvim.markdown.enable = true;
   nuqor.nvim.nix.enable = true;
   nuqor.nvim.python.enable = true;
 
