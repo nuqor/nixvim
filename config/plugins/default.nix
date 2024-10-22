@@ -13,6 +13,7 @@
     ./notify.nix
     ./nui.nix
     ./plenary.nix
+    ./telescope.nix
     ./toggleterm.nix
     ./treesitter.nix
     ./web-devicons.nix
