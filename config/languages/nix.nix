@@ -10,6 +10,7 @@ in
   config = lib.mkIf cfg.enable {
 
     nuqor.nvim.lsp.enable = lib.mkDefault true;
+    nuqor.nvim.nixfmt-rfc-style.enable = lib.mkDefault true;
 
     plugins.lsp = {
       servers = {

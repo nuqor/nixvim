@@ -7,6 +7,7 @@
     ./options.nix
     ./plugins
     ./languages
+    ./extra
   ];
 
   # Plugins
@@ -31,8 +32,4 @@
     settings.flavour = "macchiato";
   };
 
-  extraPackages = with pkgs; [
-    ripgrep
-    nixfmt-rfc-style
-  ];
 }
