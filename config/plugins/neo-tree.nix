@@ -11,7 +11,13 @@ in
     nuqor.nvim.plenary.enable = lib.mkDefault true;
     nuqor.nvim.web-devicons.enable = lib.mkDefault true;
     plugins = {
-      neo-tree.enable = true;
+      neo-tree = {
+        enable = true;
+        filesystem.filteredItems = {
+          alwaysShow = [ ".gitignore" ];
+          neverShow = [ ".DS_Store" ];
+        };
+      };
     };
   };
 }
