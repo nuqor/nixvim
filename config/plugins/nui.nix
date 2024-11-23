@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs,
   ...
 }:
 let
@@ -13,8 +12,6 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    extraPlugins = with pkgs.vimPlugins; [
-      nui-nvim
-    ];
+    plugins.nui.enable = true;
   };
 }
