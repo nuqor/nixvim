@@ -3,6 +3,7 @@
 {
   imports = [
     ./bufferline.nix
+    ./commentary.nix
     ./conform.nix
     ./hydra.nix
     ./lint.nix
