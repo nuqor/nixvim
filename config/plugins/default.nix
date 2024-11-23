@@ -4,6 +4,7 @@
   imports = [
     ./bufferline.nix
     ./conform.nix
+    ./hydra.nix
     ./lint.nix
     ./lsp.nix
     ./lualine.nix
