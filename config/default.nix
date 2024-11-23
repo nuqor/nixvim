@@ -11,7 +11,7 @@
   ];
 
   # Plugins
-  nuqor.nvim.bufferline.enable = true;
+  # nuqor.nvim.bufferline.enable = true;
   nuqor.nvim.commentary.enable = true;
   nuqor.nvim.lint.enable = true;
   nuqor.nvim.lualine.enable = true;

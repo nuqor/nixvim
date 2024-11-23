@@ -19,5 +19,6 @@
     ./toggleterm.nix
     ./treesitter.nix
     ./web-devicons.nix
+    ./wezterm.nix
   ];
 }
