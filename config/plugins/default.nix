@@ -15,6 +15,7 @@
     ./notify.nix
     ./nui.nix
     ./plenary.nix
+    ./render-markdown.nix
     ./telescope.nix
     ./toggleterm.nix
     ./treesitter.nix
