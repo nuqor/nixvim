@@ -22,6 +22,7 @@
   nuqor.nvim.nui.enable = true;
   nuqor.nvim.plenary.enable = true;
   nuqor.nvim.render-markdown.enable = true;
+  nuqor.nvim.smart-splits.enable = true;
   nuqor.nvim.telescope.enable = true;
   nuqor.nvim.treesitter.enable = true;
   nuqor.nvim.toggleterm.enable = true;

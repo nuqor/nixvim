@@ -16,6 +16,7 @@
     ./nui.nix
     ./plenary.nix
     ./render-markdown.nix
+    ./smart-splits.nix
     ./telescope.nix
     ./toggleterm.nix
     ./treesitter.nix
