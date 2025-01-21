@@ -20,7 +20,7 @@ in
           "n"
           "t"
         ];
-        key = "<C-h>";
+        key = "<A-h>";
         action = "<Cmd>lua require('smart-splits').move_cursor_left()<CR>";
         options.silent = true;
       }
@@ -29,7 +29,7 @@ in
           "n"
           "t"
         ];
-        key = "<C-j>";
+        key = "<A-j>";
         action = "<Cmd>lua require('smart-splits').move_cursor_down()<CR>";
         options.silent = true;
       }
@@ -38,7 +38,7 @@ in
           "n"
           "t"
         ];
-        key = "<C-k>";
+        key = "<A-k>";
         action = "<Cmd>lua require('smart-splits').move_cursor_up()<CR>";
         options.silent = true;
       }
@@ -47,7 +47,7 @@ in
           "n"
           "t"
         ];
-        key = "<C-l>";
+        key = "<A-l>";
         action = "<Cmd>lua require('smart-splits').move_cursor_right()<CR>";
         options.silent = true;
       }
@@ -56,7 +56,7 @@ in
           "n"
           "t"
         ];
-        key = "<A-h>";
+        key = "<C-A-h>";
         action = "<Cmd>lua require('smart-splits').resize_left()<CR>";
         options.silent = true;
       }
@@ -65,7 +65,7 @@ in
           "n"
           "t"
         ];
-        key = "<A-j>";
+        key = "<C-A-j>";
         action = "<Cmd>lua require('smart-splits').resize_down()<CR>";
         options.silent = true;
       }
@@ -74,7 +74,7 @@ in
           "n"
           "t"
         ];
-        key = "<A-k>";
+        key = "<C-A-k>";
         action = "<Cmd>lua require('smart-splits').resize_up()<CR>";
         options.silent = true;
       }
@@ -83,7 +83,7 @@ in
           "n"
           "t"
         ];
-        key = "<A-l>";
+        key = "<C-A-l>";
         action = "<Cmd>lua require('smart-splits').resize_right()<CR>";
         options.silent = true;
       }
