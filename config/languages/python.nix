@@ -18,17 +18,19 @@ in
         ruff = {
           enable = true;
           onAttach.function = ''
-            vim.api.nvim_create_autocmd("BufWritePre", {
-              buffer = bufnr,
-              callback = function()
-                vim.lsp.buf.code_action({
-                  context = { only = { "source.organizeImports" } },
-                  apply = true,
-                })
-                vim.wait(100)
-                vim.lsp.buf.format {async = false, id = client.id }
-              end,
-            })
+            if vim.b.format_on_save then
+              vim.api.nvim_create_autocmd("BufWritePre", {
+                buffer = bufnr,
+                callback = function()
+                  vim.lsp.buf.code_action({
+                    context = { only = { "source.organizeImports" } },
+                    apply = true,
+                  })
+                  vim.wait(100)
+                  vim.lsp.buf.format {async = false, id = client.id }
+                end,
+              })
+            end
           '';
         };
         # Use Pyright without linting (diagnostics)
