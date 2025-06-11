@@ -18,6 +18,7 @@
     ./render-markdown.nix
     ./smart-splits.nix
     ./telescope.nix
+    ./tiny-inline-diagnostic.nix
     ./toggleterm.nix
     ./treesitter.nix
     ./web-devicons.nix

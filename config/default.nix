@@ -24,6 +24,7 @@
   nuqor.nvim.render-markdown.enable = true;
   nuqor.nvim.smart-splits.enable = true;
   nuqor.nvim.telescope.enable = true;
+  nuqor.nvim.tiny-inline-diagnostic.enable = true;
   nuqor.nvim.treesitter.enable = true;
   nuqor.nvim.toggleterm.enable = true;
   nuqor.nvim.web-devicons.enable = true;
@@ -31,11 +32,28 @@
   # Languages
   nuqor.nvim.markdown.enable = true;
   nuqor.nvim.nix.enable = true;
-  nuqor.nvim.python.enable = true;
+  nuqor.nvim.python = {
+    enable = true;
+    formatOnSave = true;
+  };
 
   colorschemes.catppuccin = {
     enable = true;
     settings.flavour = "macchiato";
   };
 
+  editorconfig = {
+    enable = true;
+    properties = {
+      format_on_save = ''
+        function(bufnr, val)
+          assert(
+            val == 'true' or val == 'false',
+            'format_on_save must be either "true" or "false"'
+          )
+          vim.b[bufnr].format_on_save = val=='true' and true or false
+        end
+      '';
+    };
+  };
 }
