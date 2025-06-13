@@ -21,7 +21,7 @@
     ./tiny-inline-diagnostic.nix
     ./toggleterm.nix
     ./treesitter.nix
-    ./vim-slime.nix
+    ./vim-slime
     ./web-devicons.nix
     ./wezterm.nix
   ];
