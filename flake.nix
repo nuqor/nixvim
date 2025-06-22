@@ -1,5 +1,5 @@
 {
-  description = "A nixvim configuration";
+  description = "Nuqor's nixvim configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -27,6 +27,18 @@
     {
       packages = eachSystem (system: {
         default = nixvim.legacyPackages.${system}.makeNixvimWithModule nixvimModule.${system};
+        override =
+          options:
+          nixvim.legacyPackages.${system}.makeNixvimWithModule {
+            pkgs = nixpkgs.legacyPackages.${system};
+            extraSpecialArgs = { };
+            module = {
+              imports = [
+                ./config
+                options
+              ];
+            };
+          };
       });
 
       checks = eachSystem (system: {
