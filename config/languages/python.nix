@@ -59,8 +59,16 @@ in
         # Use Pyright without linting (diagnostics)
         pyright = {
           enable = true;
-          # Disable all diagnostics because it is already handled by ruff
-          onAttach.function = "client.handlers['textDocument/publishDiagnostics'] = function(...) end";
+          onAttach.function = ''
+            -- Disable all diagnostics because it is already handled by ruff
+            client.handlers['textDocument/publishDiagnostics'] = function(...) end
+            vim.lsp.completion.enable(true, client.id, bufnr, {
+              autotrigger = true,
+              convert = function(item)
+                return { abbr = item.label:gsub("%b()", "") }
+              end,
+            })
+          '';
         };
 
       };

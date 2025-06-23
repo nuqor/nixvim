@@ -8,6 +8,7 @@
     shiftwidth = 4;
     signcolumn = "yes";
     relativenumber = true;
+    completeopt = "menuone,noselect,popup";
   };
 
 }
