@@ -18,6 +18,7 @@
     ./plenary.nix
     ./render-markdown.nix
     ./smart-splits.nix
+    ./snacks.nix
     ./telescope.nix
     ./tiny-inline-diagnostic.nix
     ./toggleterm.nix

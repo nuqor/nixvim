@@ -33,6 +33,7 @@
   nuqor.nvim.web-devicons.enable = true;
   nuqor.nvim.wezterm.enable = true;
   nuqor.nvim.gitsigns.enable = true;
+  nuqor.nvim.snacks.enable = true;
 
   # Languages
   nuqor.nvim.markdown.enable = true;
