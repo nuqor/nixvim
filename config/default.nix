@@ -3,11 +3,13 @@
 {
   imports = [
     ./autocmd.nix
+    ./diagnostic.nix
+    ./extra
     ./keymaps.nix
+    ./languages
+    ./lsp.nix
     ./options.nix
     ./plugins
-    ./languages
-    ./extra
   ];
 
   # Plugins
