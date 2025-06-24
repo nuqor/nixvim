@@ -5,6 +5,7 @@
     ./bufferline.nix
     ./commentary.nix
     ./conform.nix
+    ./gitsigns.nix
     ./hydra.nix
     ./lint.nix
     ./lsp.nix
