@@ -19,6 +19,22 @@ in
       lua = [ "stylua" ];
     };
 
+    autoCmd = [
+      {
+        event = "FileType";
+        pattern = "lua";
+        callback.__raw = ''
+          function()
+            vim.api.nvim_create_autocmd("BufWritePre", {
+              callback = function()
+                require("conform").format()
+              end,
+            })
+          end
+        '';
+      }
+    ];
+
   };
 
 }

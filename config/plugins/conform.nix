@@ -11,9 +11,8 @@ in
     plugins.conform-nvim = {
       enable = true;
       settings = {
-        format_on_save = {
+        default_format_opts = {
           lsp_format = "never";
-          timeout_ms = 1000;
         };
       };
     };

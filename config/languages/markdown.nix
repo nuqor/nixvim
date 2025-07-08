@@ -32,6 +32,23 @@ in
     plugins.conform-nvim.settings.formatters_by_ft = {
       markdown = [ "mdformat" ];
     };
+
+    autoCmd = [
+      {
+        event = "FileType";
+        pattern = "markdown";
+        callback.__raw = ''
+          function()
+            vim.api.nvim_create_autocmd("BufWritePre", {
+              callback = function()
+                require("conform").format()
+              end,
+            })
+          end
+        '';
+      }
+    ];
+
   };
 
 }
