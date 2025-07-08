@@ -42,6 +42,7 @@
     enable = true;
     formatOnSave = true;
   };
+  nuqor.nvim.lua.enable = true;
 
   colorschemes.catppuccin = {
     enable = true;
